@@ -21,20 +21,19 @@ I made a custom network based on [UNet](https://arxiv.org/abs/1505.04597). The c
 ## Result
 The project is still working, and I only proceeded train, validation, and applided the model to the video. There are no test sets on CityScapes, further I will get the custom validation and test sets. 
 
-The evaluation methods that I took is **mean IoU** and **Accuracy**. Result graphs of training and validation procedure are like below.
-![evaluation](./markdown_attach/evaluation.png)
+The evaluation methods that I took is **mean IoU** and **Accuracy**. Result graphs of training and validation procedure are like below. **(Proceeded on colab)**
+![evaluation](./markdown_attach/evaluation_colab.png)
 
-Since there are no test datasets on CityScapes, I re-applied the processed model to some of my validation data again and the results are like below.
-![val_output_1](./markdown_attach/val_output_1.png)
-![val_output_2](./markdown_attach/val_output_2.png)
-![val_output_3](./markdown_attach/val_output_3.png)
-![val_output_4](./markdown_attach/val_output_4.png)
-![val_output_5](./markdown_attach/val_output_5.png)
-Keep in mind that **the ground truth images's R and B channels are inverted**, since I didn't proceed cvtColor(BGR2RGB) by mistake.
+Since there are no test datasets on CityScapes, I re-applied the processed model to some of my validation data again and the results are like below. **(Proceeded on colab)**
+![val_output_1](./markdown_attach/val_output_1_colab.png)
+![val_output_2](./markdown_attach/val_output_2_colab.png)
+![val_output_3](./markdown_attach/val_output_3_colab.png)
+![val_output_4](./markdown_attach/val_output_4_colab.png)
+![val_output_5](./markdown_attach/val_output_5_colab.png)
 Concerning with it, the result looks pretty good, but this is re-application to the validation image again.
 
 
-Also, after I got the model(.h5) file of 128x128 Images(using Colab), I applied the model to my video, which is a Euro Truck Simulator 2 Gameplay video resized to 128x128. And it is like below.
+Also, after I got the model(.h5) file of 128x128 Images **(Proceeded on colab)**, I applied the model to my video, which is a Euro Truck Simulator 2 Gameplay video resized to 128x128. And it is like below.
 ![eurotruck_gif](./markdown_attach/euro_truck_128.gif)
 
 Based on the output gif above, It looks like the performance of the model is quite low and I think it's because of low resolution of Input data(caused by the lack of Computation, both on Local and Colab).
